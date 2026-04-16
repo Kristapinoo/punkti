@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Point Counter</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="wrap">
+
+    <header class="topbar">
+      <h1>Point counter</h1>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" id="tabGameBtn">Current game</button>
+      <button class="tab" id="tabHistoryBtn">History</button>
+    </div>
+
+    <!-- GAME TAB -->
+    <section id="tab-game">
+      <div class="players" id="players"></div>
+
+      <div class="add-section">
+        <p class="add-label">Add a player</p>
+
+        <div class="add-row">
+          <input id="nameInput" type="text" placeholder="Player name..." maxlength="20" />
+          <button id="addPlayerBtn">Add</button>
+        </div>
+
+        <div class="action-row">
+          <button class="action-btn" id="resetBtn">Reset scores</button>
+          <button class="action-btn save-game" id="saveGameBtn">Save game</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORY TAB -->
+    <section id="tab-history" class="hidden">
+      <div class="history" id="history"></div>
+      <p class="empty hidden" id="history-empty">No saved games yet</p>
+    </section>
+
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-bg hidden" id="modal">
+    <div class="modal">
+      <h2>Save game</h2>
+      <p>Give this game a name (optional)</p>
+
+      <input id="gameNameInput" type="text"
+        placeholder="e.g. Friday night, Round 3..." maxlength="40" />
+
+      <div class="modal-btns">
+        <button id="cancelModalBtn">Cancel</button>
+        <button class="confirm" id="confirmSaveBtn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
