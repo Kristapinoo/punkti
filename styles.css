@@ -178,7 +178,7 @@ body.dark .c4 { background:rgba(255,210,120,0.14); color:#ffd98a; }
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
-  max-width:120px;
+  max-width:140px;
 }
 
 .controls {
@@ -188,43 +188,10 @@ body.dark .c4 { background:rgba(255,210,120,0.14); color:#ffd98a; }
   margin-left:auto;
 }
 
-.btn {
-  width:40px;
-  height:40px;
-  border-radius:10px;
-  border:0.5px solid var(--border);
-  background:transparent;
-  cursor:pointer;
-  font-size:20px;
-  font-weight:500;
-  color:var(--text);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:background 0.12s,transform 0.08s;
-  touch-action: manipulation;
-}
-
-.btn:hover {
-  background:var(--bg);
-}
-
-.btn:active {
-  transform:scale(0.94);
-}
-
-.btn-del {
-  color:var(--danger);
-  border-color: rgba(227,75,74,0.35);
-}
-
-.btn-del:hover {
-  background:var(--danger-bg);
-}
-
+/* INPUT SCORE */
 .score-input {
-  width:74px;
-  height:40px;
+  width:90px;
+  height:42px;
   border-radius:10px;
   border:0.5px solid var(--border);
   background:var(--input-bg);
@@ -233,7 +200,7 @@ body.dark .c4 { background:rgba(255,210,120,0.14); color:#ffd98a; }
   font-size:18px;
   font-weight:500;
   text-align:center;
-  padding:0 4px;
+  padding:0 6px;
   appearance: textfield;
 }
 
@@ -250,6 +217,32 @@ body.dark .c4 { background:rgba(255,210,120,0.14); color:#ffd98a; }
 
 body.dark .score-input:focus {
   border-color: rgba(255,255,255,0.25);
+}
+
+/* DELETE BUTTON */
+.btn-del {
+  width:42px;
+  height:42px;
+  border-radius:10px;
+  border:0.5px solid rgba(227,75,74,0.35);
+  background:transparent;
+  cursor:pointer;
+  font-size:20px;
+  font-weight:500;
+  color:var(--danger);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background 0.12s,transform 0.08s;
+  touch-action: manipulation;
+}
+
+.btn-del:hover {
+  background:var(--danger-bg);
+}
+
+.btn-del:active {
+  transform:scale(0.94);
 }
 
 /* ADD SECTION */
@@ -294,13 +287,14 @@ body.dark .add-row input:focus {
   border-color: rgba(255,255,255,0.25);
 }
 
+/* FIXED ADD BUTTON */
 .add-row button {
   height:42px;
   padding:0 16px;
   border-radius:10px;
   border:0.5px solid var(--border);
-  background:var(--text);
-  color:#fff;
+  background: var(--success);
+  color: #fff;
   font-family:"DM Sans",sans-serif;
   font-size:14px;
   font-weight:500;
@@ -313,6 +307,7 @@ body.dark .add-row input:focus {
   opacity:0.85;
 }
 
+/* ACTION BUTTONS */
 .action-row {
   display:flex;
   gap:8px;
@@ -551,10 +546,11 @@ body.dark .modal input:focus {
   touch-action: manipulation;
 }
 
+/* FIXED CONFIRM BUTTON */
 .modal-btns .confirm {
-  background:var(--text);
+  background: var(--success);
   color:#fff;
-  border-color:var(--text);
+  border-color: var(--success);
 }
 
 .modal-btns button:hover {
