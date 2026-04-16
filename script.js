@@ -142,12 +142,6 @@ function removePlayer(i) {
   renderPlayers();
 }
 
-function changeScore(i, delta) {
-  players[i].score += delta;
-  savePlayers();
-  renderPlayers();
-}
-
 function setScore(i, val) {
   const n = parseInt(val, 10);
 
@@ -222,14 +216,11 @@ function renderPlayers() {
         <span class="player-name">${p.name}</span>
 
         <div class="controls">
-          <button class="btn" onclick="changeScore(${i},-1)">−</button>
-
           <input class="score-input" type="number" value="${p.score}"
             onchange="setScore(${i},this.value)"
             onblur="setScore(${i},this.value);renderPlayers()" />
 
-          <button class="btn" onclick="changeScore(${i},1)">+</button>
-          <button class="btn btn-del" onclick="removePlayer(${i})">×</button>
+          <button class="btn-del" onclick="removePlayer(${i})">×</button>
         </div>
       </div>
     `
